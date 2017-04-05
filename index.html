@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>To Do List</title>
+    <link href="styles/reset.css" rel="stylesheet" type="text/css">     
+    <link href="styles/styles.css" rel="stylesheet" type="text/css">
+    <link href="styles/addForm.css" rel="stylesheet" type="text/css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+</head>
+<body ng-app="toDoList">
+    <div id="content" ng-controller="mainController">
+        <addform ng-show="form"></addform>
+        <header>
+            <img id="logo" src="images/logo.png" />
+            <h1>What do you have to do today ?</h1>
+        </header>
+        <div id="todolist">
+            <button id="add" ng-click="formAppear()">+ Add</button>
+            <button ng-show="checkedList.length > 1" id="remove" ng-click="removeCheckedTasks()">Remove all checked tasks</button>
+            <ul id="list">
+                <li ng-repeat="task in tasks" id="item{{$index}}">
+                    <item task="task" index="{{$index}}" removetask="removeTask(index)" addtocheckedlist="addToCheckedList(index)"><item>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-cookies.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-sanitize.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/directives/addForm.js"></script>
+    <script src="scripts/directives/item.js"></script>
+    <script src="scripts/jspatch.js"></script>
+</body>
+</html>

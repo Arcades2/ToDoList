@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+    font-family: 'Roboto', sans-serif;
+	background: url('../images/footer_lodyas.png');
+	height: 100%;
+}
+
+header {
+	background-color: #AB0000;
+	height: 100px;
+}
+
+header h1 {
+	font-size: 1.2em;
+	color: white;
+	float: left;
+	margin-top: 50px;
+}
+
+#logo {
+	margin: 15px;
+	float: left;
+}
+
+#todolist {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.stop-scrolling {
+	height: 100%;
+	overflow: hidden;
+}
+
+#add {
+	margin-top: 25px;
+	color: #F5F3EE;
+	font-weight: bold;
+	width: 200px;
+	height: 50px;
+	font-size: 2em;
+	border: none;
+	border-radius: 6px;
+	background-color: #1C1F24;
+	cursor: pointer;
+}
+
+#add:hover {
+	opacity: 0.9;
+	box-shadow: 3px 3px 3px #888888;
+}
+
+#remove {
+	margin-top: 25px;
+	color: #1C1F24;
+	font-weight: bold;
+	width: 200px;
+	height: 50px;
+	border: none;
+	border-radius: 6px;
+	background-color: #F5F3EE;
+	cursor: pointer;
+	display: block;
+}
+
+#list {
+	padding: 10px;
+	margin: 15px auto;
+	list-style-type: none;
+	width: 80%;
+}
+
+#list li {
+	position: relative;
+	background-color: #5B6073;
+	margin-top: 10px;
+	padding: 15px;
+	border-radius: 5px;
+	color: white;
+}
+
+hr {
+	background-color:#AB0000;
+	height:2px;border:none;
+	margin-right: 5%;
+}
+
+.description {
+	word-wrap: break-word;
+	font-size: 0.9em;
+	padding: 5px 10%;
+}
+
+.close {
+	cursor: pointer;
+	position: absolute;
+	top: 15px;
+	right: 15px;
+}
+
+.close:hover {
+	opacity: 0.7;
+}
+
+input[type=checkbox].css-checkbox {
+							position:absolute; z-index:-1000; left:-1000px; overflow: hidden; clip: rect(0 0 0 0); height:1px; width:1px; margin:-1px; padding:0; border:0;
+						}
+
+						input[type=checkbox].css-checkbox + label.css-label {
+							padding-left:23px;
+							height:18px; 
+							display:inline-block;
+							line-height:18px;
+							background-repeat:no-repeat;
+							background-position: 0 0;
+							font-size:18px;
+							vertical-align:middle;
+							cursor:pointer;
+
+						}
+
+						input[type=checkbox].css-checkbox:checked + label.css-label {
+							background-position: 0 -18px;
+						}
+						label.css-label {
+				background-image:url(http://csscheckbox.com/checkboxes/u/csscheckbox_001aa7bf6327f8fac80e0eb160776ef4.png);
+				-webkit-touch-callout: none;
+				-webkit-user-select: none;
+				-khtml-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+			}

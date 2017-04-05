@@ -1,0 +1,5 @@
+<input ng-model="confirmed" type="checkbox" class="css-checkbox" name="checkbox{{index}}" id="checkbox{{index}}" ng-change="addToCheckedList({index:index})"/>
+<label class="css-label" for="checkbox{{index}}">{{task.title}}</label>
+<img class="close" ng-click="removeTask({index:index})" ng-show="confirmed" src="../../images/close.gif" width="20" height="20" alt="Remove the task" title="Remove the task"  />
+<hr>
+<p class="description">{{task.description}}</p>

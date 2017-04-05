@@ -1,0 +1,14 @@
+<div id="popup" ng-click="removeForm()">
+    <div id="addFormBox" ng-click="$event.stopPropagation()">
+        <form id="addForm" name="addForm" ng-submit="addForm.$valid && validate()">
+            <h1>Add a new task</h1>
+            <div ng-show="addForm.title.$touched">
+                <div ng-show="addForm.title.$error.required">You have to put a title to the task</div>
+            </div>
+            <input id="title" type="text" name="title" ng-model="tmpTask.title" placeholder="Title here..." required maxlength="40"/>
+            <label for="description">Description (140 char max)</label>
+            <textarea name="description" id="description" placeholder="Description here..." maxlength="140" ng-model="tmpTask.description"></textarea>
+            <button id="addTask" type="submit"><i class="fa fa-lg fa-floppy-o"></i></button>
+        </form>
+    </div>
+</div>
